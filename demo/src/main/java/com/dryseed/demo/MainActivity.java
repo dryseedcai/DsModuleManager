@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ModuleManager.getQYPageModel().clearMessageRedDot();
+        //ModuleManager.getQYPageModel().clearMessageRedDot();
 
         //为了便于测试跨进程服务的效果
         //这里通过startService创建了3个进程，这几个服务本身无用。

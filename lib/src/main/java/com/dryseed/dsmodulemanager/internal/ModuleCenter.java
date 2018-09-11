@@ -2,11 +2,13 @@ package com.dryseed.dsmodulemanager.internal;
 
 import android.content.ContentValues;
 import android.database.Cursor;
+import android.os.Process;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
 
 import com.dryseed.dsmodulemanager.DefaultLogger;
 import com.dryseed.dsmodulemanager.ModuleManager;
+import com.dryseed.dsmodulemanager.communication.ProcessUtil;
 import com.dryseed.dsmodulemanager.provider.DispatcherProvider;
 import com.dryseed.dsmodulemanager.provider.ModuleProcCursor;
 
@@ -66,7 +68,7 @@ public class ModuleCenter {
     }
 
     private void registerProcess(String name, String process) {
-        DefaultLogger.d(TAG, "register, module=", name, ", process=", process);
+        DefaultLogger.d(TAG, "register, module=", name, ", process=", process, ", processName=", ProcessUtil.getProcessNameByPID(ModuleManager.getContext(), Process.myPid()));
         ContentValues values = new ContentValues();
         values.put("name", name);
         values.put("process", process);

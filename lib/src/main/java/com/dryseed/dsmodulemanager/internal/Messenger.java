@@ -21,6 +21,7 @@ public class Messenger {
     }
 
     public static <V> void sendDataToModuleLocal(final ModuleBean bean, final Callback<V> callback) {
+        DefaultLogger.d(TAG, "sendDataToModuleLocal");
         Object module = ModuleCenter.getInstance().getModule(bean.getModuleName());
         if (module instanceof ICommunication) {
             ((ICommunication) module).sendDataToModule(bean, callback);
@@ -28,6 +29,7 @@ public class Messenger {
     }
 
     public static <V> void sendDataToModuleRemote(final ModuleBean bean, final Callback<V> callback, String processName) {
+        DefaultLogger.d(TAG, "sendDataToModuleRemote process=", processName);
         IBinder binder = ConnectionManager.getInstance().fetchBinder(processName);
         if (binder != null && binder.isBinderAlive()) {
             try {
@@ -53,6 +55,7 @@ public class Messenger {
     }
 
     public static <V> V getDataFromModuleLocal(ModuleBean bean) {
+        DefaultLogger.d(TAG, "getDataFromModuleLocal");
         Object module = ModuleCenter.getInstance().getModule(bean.getModuleName());
         if (module instanceof ICommunication) {
             return (V) ((ICommunication) module).getDataFromModule(bean);
@@ -62,6 +65,7 @@ public class Messenger {
     }
 
     public static <V> V getDataFromModuleRemote(final ModuleBean bean, String processName) {
+        DefaultLogger.d(TAG, "getDataFromModuleRemote process=", processName);
         IBinder binder = ConnectionManager.getInstance().fetchBinder(processName);
         if (binder != null && binder.isBinderAlive()) {
             try {

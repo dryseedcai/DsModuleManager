@@ -128,6 +128,7 @@ public class ModuleManager {
 
     @SuppressWarnings("unchecked")
     protected static <T> T getRemoteModule(final Class<T> clazz, final String process) {
+        DefaultLogger.d(TAG, "getRemoteModule " + process);
         if (TextUtils.isEmpty(process)) {
             return EmptyModuleApi.newDefaultImplApi(clazz);
         }
@@ -139,6 +140,7 @@ public class ModuleManager {
                     new InvocationHandler() {
                         @Override
                         public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+                            DefaultLogger.d(TAG, "invoke method=", method.getName());
                             ModuleApi moduleAnnotation = clazz.getAnnotation(ModuleApi.class);
                             com.dryseed.dsmodulemanager.annotation.Method methodAnnotation =
                                     method.getAnnotation(com.dryseed.dsmodulemanager.annotation.Method.class);
@@ -172,6 +174,7 @@ public class ModuleManager {
     }
 
     public static <T> T getModule(String name, Class<T> clazz) {
+        DefaultLogger.d(TAG, "getModule " + name);
         if (clazz == null || !clazz.isInterface()) {
             throw new IllegalArgumentException("Invalid module interface class !");
         }
@@ -214,24 +217,4 @@ public class ModuleManager {
     public static IQYPageApi getQYPageModel() {
         return getModule(IModuleConstants.MODULE_NAME_QYPAGE, IQYPageApi.class);
     }
-
-//    public static IDownloadApi getDownloadModel() {
-//        return getModule(IModuleConstants.MODULE_NAME_DOWNLOAD, IDownloadApi.class);
-//    }
-//
-//    public static IDownloadServiceApi getDownloadServiceModel() {
-//        return getModule(IModuleConstants.MODULE_NAME_DOWNLOAD_SERVICE, IDownloadServiceApi.class);
-//    }
-//
-//    public static INavigationApi getNavigationModule() {
-//        return getModule(IModuleConstants.MODULE_NAME_NAVIGATION, INavigationApi.class);
-//    }
-//
-//    public static IQYVerticalPlayerApi getQYVerticalPlayerModule() {
-//        return getModule(IModuleConstants.MODULE_NAME_VERTICAL_PLAYER, IQYVerticalPlayerApi.class);
-//    }
-//
-//    public static IPassportPluginApi getPassportPluginModule() {
-//        return getModule(IModuleConstants.MODULE_NAME_PASSPORT_PLUGIN, IPassportPluginApi.class);
-//    }
 }

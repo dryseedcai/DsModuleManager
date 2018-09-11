@@ -2,9 +2,11 @@ package com.dryseed.demo;
 
 import android.app.Application;
 import android.content.Context;
+import android.os.Process;
 
 import com.dryseed.demo.generate.GlobalModuleRegister;
 import com.dryseed.dsmodulemanager.ModuleManager;
+import com.dryseed.dsmodulemanager.communication.ProcessUtil;
 
 /**
  * @author caiminming
@@ -34,7 +36,9 @@ public class MyApplication extends Application {
         super.onCreate();
 
         String hostProcessName = getPackageName();
-        ModuleManager.init(this, hostProcessName);
+        String currentProcessName = ProcessUtil.getProcessNameByPID(this, Process.myPid());
+
+        ModuleManager.init(this, currentProcessName);
         GlobalModuleRegister.registerModules(this, hostProcessName);
     }
 }
