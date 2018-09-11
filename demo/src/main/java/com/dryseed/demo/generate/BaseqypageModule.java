@@ -10,7 +10,7 @@ import com.dryseed.dsmodulemanager.communication.ModuleBean;
 
 
 public abstract class BaseqypageModule extends BaseCommunication<ModuleBean> implements IQYPageApi {
-    protected static final String TAG = "qypageModule";
+    protected static final String TAG = "MMM";
 
     protected Context mContext;
 

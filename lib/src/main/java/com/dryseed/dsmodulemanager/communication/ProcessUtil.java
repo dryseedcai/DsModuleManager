@@ -1,5 +1,8 @@
 package com.dryseed.dsmodulemanager.communication;
 
+import android.app.ActivityManager;
+import android.content.Context;
+
 import com.dryseed.dsmodulemanager.DefaultLogger;
 import com.dryseed.dsmodulemanager.ModuleManager;
 
@@ -43,4 +46,15 @@ public class ProcessUtil {
         return UNKNOW_PROCESS_NAME;
     }
 
+    public static String getProcessNameByPID(Context context, int pid) {
+        ActivityManager manager
+                = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+
+        for (ActivityManager.RunningAppProcessInfo processInfo : manager.getRunningAppProcesses()) {
+            if (processInfo.pid == pid) {
+                return processInfo.processName;
+            }
+        }
+        return "";
+    }
 }

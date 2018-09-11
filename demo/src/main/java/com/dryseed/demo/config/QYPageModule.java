@@ -1,10 +1,13 @@
 package com.dryseed.demo.config;
 
 import android.content.Context;
+import android.os.Process;
 
+import com.dryseed.demo.MyApplication;
 import com.dryseed.demo.generate.BaseqypageModule;
 import com.dryseed.dsmodulemanager.DefaultLogger;
 import com.dryseed.dsmodulemanager.communication.ModuleBean;
+import com.dryseed.dsmodulemanager.communication.ProcessUtil;
 
 /**
  * Created by shisong on 2018/2/28.
@@ -39,7 +42,7 @@ public class QYPageModule extends BaseqypageModule {
 
     @Override
     public void clearMessageRedDot() {
-        DefaultLogger.d(TAG, ">>> clearMessageRedDot");
+        DefaultLogger.d(TAG, String.format(">>> clearMessageRedDot [pname:%s]", ProcessUtil.getProcessNameByPID(MyApplication.getInstance(), Process.myPid())));
     }
 
     @Override

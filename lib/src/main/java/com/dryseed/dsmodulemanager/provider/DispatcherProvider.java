@@ -21,8 +21,6 @@ import java.util.concurrent.ConcurrentHashMap;
  * 参考https://github.com/limpoxe/Android-ServiceManager
  */
 public class DispatcherProvider extends ContentProvider {
-
-
     private static final String AUTHORITY = "com.dryseed.dsmodulemanager.module.dispatcher";
     private static final int URI_CODE_BINDER = 1;
     private static final int URI_CODE_PROCESS = 2;
