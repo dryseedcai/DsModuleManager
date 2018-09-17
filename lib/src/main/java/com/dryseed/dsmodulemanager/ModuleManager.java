@@ -5,9 +5,6 @@ import android.content.Intent;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
 
-import com.dryseed.dsmodulemanager.annotation.MethodType;
-import com.dryseed.dsmodulemanager.annotation.ModuleApi;
-import com.dryseed.dsmodulemanager.annotation.Param;
 import com.dryseed.dsmodulemanager.communication.Callback;
 import com.dryseed.dsmodulemanager.communication.EmptyModuleApi;
 import com.dryseed.dsmodulemanager.communication.ICommunication;
@@ -23,6 +20,9 @@ import com.dryseed.dsmodulemanager.log.DefaultLogger;
 import com.dryseed.dsmodulemanager.provider.DispatcherProvider;
 import com.dryseed.dsmodulemanager.provider.ModuleProcObserver;
 import com.dryseed.dsmodulemanager.receiver.DispatcherReceiver;
+import com.dryseed.modulemanagerannotation.MethodType;
+import com.dryseed.modulemanagerannotation.ModuleApi;
+import com.dryseed.modulemanagerannotation.Param;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.InvocationHandler;
@@ -143,8 +143,8 @@ public class ModuleManager {
                         public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
                             DefaultLogger.d(TAG, "invoke method=", method.getName());
                             ModuleApi moduleAnnotation = clazz.getAnnotation(ModuleApi.class);
-                            com.dryseed.dsmodulemanager.annotation.Method methodAnnotation =
-                                    method.getAnnotation(com.dryseed.dsmodulemanager.annotation.Method.class);
+                            com.dryseed.modulemanagerannotation.Method methodAnnotation =
+                                    method.getAnnotation(com.dryseed.modulemanagerannotation.Method.class);
 
                             if (moduleAnnotation != null && methodAnnotation != null) {
                                 Callback<?> callback = findCallbackParam(method, args);

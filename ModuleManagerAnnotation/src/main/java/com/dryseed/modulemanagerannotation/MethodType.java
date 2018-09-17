@@ -1,4 +1,4 @@
-package com.dryseed.dsmodulemanager.annotation;
+package com.dryseed.modulemanagerannotation;
 
 /**
  * Created by Shen YunLong on 2018/05/01.
