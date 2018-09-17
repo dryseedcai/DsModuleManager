@@ -1,4 +1,4 @@
-package com.dryseed.dsmodulemanager;
+package com.dryseed.dsmodulemanager.log;
 
 /**
  * Created by Shen YunLong on 2018/08/27.

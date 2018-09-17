@@ -3,7 +3,7 @@ package com.dryseed.demo.generate;
 import android.content.Context;
 
 import com.dryseed.dsmodulemanager.config.IQYPageApi;
-import com.dryseed.dsmodulemanager.DefaultLogger;
+import com.dryseed.dsmodulemanager.log.DefaultLogger;
 import com.dryseed.dsmodulemanager.communication.BaseCommunication;
 import com.dryseed.dsmodulemanager.communication.Callback;
 import com.dryseed.dsmodulemanager.communication.ModuleBean;
@@ -22,7 +22,7 @@ public abstract class BaseqypageModule extends BaseCommunication<ModuleBean> imp
     protected boolean checkActionModule(ModuleBean bean) {
         if (bean != null) {
             int module = bean.getModule();
-            return module == 92274688;
+            return module == 4194304;
         }
         return false;
     }
@@ -46,13 +46,9 @@ public abstract class BaseqypageModule extends BaseCommunication<ModuleBean> imp
 
     private Object getData(ModuleBean bean) {
         switch (bean.getAction()) {
-            case 102: {
+            case 101: {
                 DefaultLogger.d(TAG, "getData# action=", bean.getAction());
                 return isShowRedDotOnServiceTab();
-            }
-            case 103: {
-                DefaultLogger.d(TAG, "getData# action=", bean.getAction());
-                return getBottomThemeTimestamp();
             }
             default:
                 return null;
@@ -77,26 +73,9 @@ public abstract class BaseqypageModule extends BaseCommunication<ModuleBean> imp
 
     private <V> void doAction(ModuleBean bean, Callback<V> callback) {
         switch (bean.getAction()) {
-            case 108: {
-                Context context = (Context) bean.getArg("context");
-                DefaultLogger.d(TAG, "doAction# action=", bean.getAction(), ", context=", context);
-                toVIPRecommendPage(context);
-                break;
-            }
-            case 109: {
-                Context context = (Context) bean.getArg("context");
-                DefaultLogger.d(TAG, "doAction# action=", bean.getAction(), ", context=", context);
-                toVIPClubPage(context);
-                break;
-            }
-            case 105: {
+            case 102: {
                 DefaultLogger.d(TAG, "doAction# action=", bean.getAction());
                 clearMessageRedDot();
-                break;
-            }
-            case 106: {
-                DefaultLogger.d(TAG, "doAction# action=", bean.getAction());
-                clearSkin();
                 break;
             }
             default:

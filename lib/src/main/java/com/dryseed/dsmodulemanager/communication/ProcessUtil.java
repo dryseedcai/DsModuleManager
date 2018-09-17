@@ -3,8 +3,8 @@ package com.dryseed.dsmodulemanager.communication;
 import android.app.ActivityManager;
 import android.content.Context;
 
-import com.dryseed.dsmodulemanager.DefaultLogger;
 import com.dryseed.dsmodulemanager.ModuleManager;
+import com.dryseed.dsmodulemanager.log.DefaultLogger;
 
 import java.io.BufferedReader;
 import java.io.File;

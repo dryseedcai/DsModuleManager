@@ -1,6 +1,6 @@
 package com.dryseed.dsmodulemanager.communication;
 
-import com.dryseed.dsmodulemanager.DefaultLogger;
+import com.dryseed.dsmodulemanager.log.DefaultLogger;
 
 import java.lang.reflect.Array;
 import java.lang.reflect.InvocationHandler;

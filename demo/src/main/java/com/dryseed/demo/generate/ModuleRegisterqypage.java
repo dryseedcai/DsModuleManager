@@ -1,12 +1,10 @@
 package com.dryseed.demo.generate;
 
 import android.content.Context;
-import android.util.Log;
-
 
 import com.dryseed.demo.config.QYPageModule;
-import com.dryseed.dsmodulemanager.DefaultLogger;
 import com.dryseed.dsmodulemanager.ModuleManager;
+import com.dryseed.dsmodulemanager.log.DefaultLogger;
 
 import java.util.Arrays;
 import java.util.List;

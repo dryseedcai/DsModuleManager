@@ -5,9 +5,9 @@ import android.content.Intent;
 import android.os.IBinder;
 import android.os.Process;
 
-import com.dryseed.dsmodulemanager.DefaultLogger;
 import com.dryseed.dsmodulemanager.ModuleManager;
 import com.dryseed.dsmodulemanager.communication.ProcessUtil;
+import com.dryseed.dsmodulemanager.log.DefaultLogger;
 
 import static com.dryseed.dsmodulemanager.ModuleManager.TAG;
 

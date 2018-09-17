@@ -2,7 +2,7 @@ package com.dryseed.dsmodulemanager.ipc;
 
 import android.os.RemoteException;
 
-import com.dryseed.dsmodulemanager.DefaultLogger;
+import com.dryseed.dsmodulemanager.log.DefaultLogger;
 import com.dryseed.dsmodulemanager.communication.Callback;
 
 

@@ -6,7 +6,7 @@ import android.os.Process;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
 
-import com.dryseed.dsmodulemanager.DefaultLogger;
+import com.dryseed.dsmodulemanager.log.DefaultLogger;
 import com.dryseed.dsmodulemanager.ModuleManager;
 import com.dryseed.dsmodulemanager.communication.ProcessUtil;
 import com.dryseed.dsmodulemanager.provider.DispatcherProvider;

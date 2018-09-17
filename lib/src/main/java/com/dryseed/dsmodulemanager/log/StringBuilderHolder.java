@@ -1,4 +1,4 @@
-package com.dryseed.dsmodulemanager;
+package com.dryseed.dsmodulemanager.log;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -3,8 +3,7 @@ package com.dryseed.dsmodulemanager.provider;
 import android.database.ContentObserver;
 import android.os.Handler;
 
-import com.dryseed.dsmodulemanager.DefaultLogger;
-import com.dryseed.dsmodulemanager.ModuleManager;
+import com.dryseed.dsmodulemanager.log.DefaultLogger;
 import com.dryseed.dsmodulemanager.internal.ModuleCenter;
 
 /**

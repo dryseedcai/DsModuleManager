@@ -3,7 +3,7 @@ package com.dryseed.dsmodulemanager.internal;
 import android.os.IBinder;
 import android.os.RemoteException;
 
-import com.dryseed.dsmodulemanager.DefaultLogger;
+import com.dryseed.dsmodulemanager.log.DefaultLogger;
 import com.dryseed.dsmodulemanager.communication.Callback;
 import com.dryseed.dsmodulemanager.communication.ICommunication;
 import com.dryseed.dsmodulemanager.communication.ModuleBean;

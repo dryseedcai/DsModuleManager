@@ -4,7 +4,7 @@ import android.os.IBinder;
 import android.os.RemoteException;
 import android.text.TextUtils;
 
-import com.dryseed.dsmodulemanager.DefaultLogger;
+import com.dryseed.dsmodulemanager.log.DefaultLogger;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

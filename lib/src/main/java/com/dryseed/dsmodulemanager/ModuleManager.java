@@ -19,6 +19,7 @@ import com.dryseed.dsmodulemanager.dispatcher.ConnectionManager;
 import com.dryseed.dsmodulemanager.internal.Messenger;
 import com.dryseed.dsmodulemanager.internal.ModuleCenter;
 import com.dryseed.dsmodulemanager.ipc.IPCommunication;
+import com.dryseed.dsmodulemanager.log.DefaultLogger;
 import com.dryseed.dsmodulemanager.provider.DispatcherProvider;
 import com.dryseed.dsmodulemanager.provider.ModuleProcObserver;
 import com.dryseed.dsmodulemanager.receiver.DispatcherReceiver;

@@ -5,7 +5,7 @@ import android.os.IBinder;
 import android.os.RemoteException;
 import android.text.TextUtils;
 
-import com.dryseed.dsmodulemanager.DefaultLogger;
+import com.dryseed.dsmodulemanager.log.DefaultLogger;
 import com.dryseed.dsmodulemanager.ModuleManager;
 import com.dryseed.dsmodulemanager.ipc.IPCommunication;
 import com.dryseed.dsmodulemanager.provider.DispatcherCursor;

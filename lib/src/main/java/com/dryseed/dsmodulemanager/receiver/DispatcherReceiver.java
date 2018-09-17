@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.text.TextUtils;
 
-import com.dryseed.dsmodulemanager.DefaultLogger;
+import com.dryseed.dsmodulemanager.log.DefaultLogger;
 import com.dryseed.dsmodulemanager.ModuleManager;
 import com.dryseed.dsmodulemanager.dispatcher.ConnectionManager;
 import com.dryseed.dsmodulemanager.internal.ModuleCenter;
