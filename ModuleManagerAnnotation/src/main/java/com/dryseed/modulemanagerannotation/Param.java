@@ -1,4 +1,4 @@
-package com.dryseed.dsmodulemanager.annotation;
+package com.dryseed.modulemanagerannotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

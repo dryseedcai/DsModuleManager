@@ -25,3 +25,8 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+ext {
+    javapoetVersion = '1.7.0'
+    autoServiceVersion = '1.0-rc2'
+}

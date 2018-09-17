@@ -1,8 +1,8 @@
 package com.dryseed.dsmodulemanager.config;
 
-import com.dryseed.dsmodulemanager.annotation.Method;
-import com.dryseed.dsmodulemanager.annotation.MethodType;
-import com.dryseed.dsmodulemanager.annotation.ModuleApi;
+import com.dryseed.modulemanagerannotation.Method;
+import com.dryseed.modulemanagerannotation.MethodType;
+import com.dryseed.modulemanagerannotation.ModuleApi;
 
 import static com.dryseed.dsmodulemanager.communication.IModuleConstants.MODULE_ID_QYPAGE;
 import static com.dryseed.dsmodulemanager.communication.IModuleConstants.MODULE_NAME_QYPAGE;
